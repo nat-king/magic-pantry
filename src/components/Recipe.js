@@ -4,23 +4,40 @@ import {BrowserRouter as Router,
   Switch, 
   useRouteMatch,
   useParams} from 'react-router-dom';
+import {Card, TextContainer, Button, ButtonGroup} from '@shopify/polaris';
 import Ingredients from './Ingredients';
 import Instructions from './Instructions';
+import pic from '../bg.png';
+import '../index.css';
 
 function Recipes() {
   let match = useRouteMatch();
   let { recipeId } = useParams();
-  console.log(match, recipeId)
+  const recipeName = 'Veggie burger'
+  const markUp = (
+    <Card
+          title={recipeName}
+        >
+          <Card.Section>
+            <img id="bg" src={pic} alt="bg" />
+          </Card.Section>
+          <Card.Section>
+          <ButtonGroup fullWidth={true}>
+            <Button url={`${match.url}/ingredients`}>Ingredients</Button>
+            <Button url={`${match.url}/instructions`}>Instructions</Button>
+          </ButtonGroup>
+          </Card.Section>
+        </Card>
+  );
   return (
-    <>
-        <h3>Requested topic ID: {recipeId}</h3>
-        <Router>
-            <Switch>
-            <Route  path={`${match.url}/ingredients`} component={Ingredients}/>
-            <Route  path={`${match.url}/instructions`} component={Instructions}/>
-            </Switch>
-        </Router>
-    </>
+      <Router>
+          <Switch>  
+          <Route path={`${match.url}/ingredients`} component={Ingredients}/>
+          <Route path={`${match.url}/instructions`} component={Instructions}/>
+          <Route path={`${match.url}`}>{markUp}</Route>
+          </Switch>
+      </Router>
+    
   );
 }
 
