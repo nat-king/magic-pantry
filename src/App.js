@@ -13,7 +13,6 @@ import logo from './logo.png';
 function App() {
   const [active, setActive] = useState(false);
   const activator = <Button onClick={handleChange}>Menu</Button>;
-
   return (
     <>
         <Stack distribution="center" spacing="loose" alignment="center">

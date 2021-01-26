@@ -1,9 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Router,
   Route,
-  Switch, 
-  useRouteMatch} from 'react-router-dom';
-import {Card, TextContainer} from '@shopify/polaris';
+  Switch} from 'react-router-dom';
+import {Card, TextContainer, Button, Stack} from '@shopify/polaris';
 import pic from '../bg.png';
 import '../index.css';
 import Recipe from './Recipe';
@@ -11,32 +10,37 @@ import Recipe from './Recipe';
 
 
 function Spinner() {
-  let match = useRouteMatch();
+  const base = 'http://localhost:3000';
   const recipeName = 'Veggie burger'
   const recipeId = '1'
   return (
     <>
-      <Card
-        title={recipeName}
-        secondaryFooterActions={[
-          {content: 'Nay', url: `${match.url}/spinner`}
-        ]}
-        primaryFooterAction={
-          {content: 'Yay', url: `${match.url}/${recipeId}`}
-        }
-      >
-        <Card.Section>
-          <img id="bg" src={pic} alt="bg" />
-        </Card.Section>
-        <Card.Section>
-          <TextContainer>
-            Healthy veggie burgers, homemade bean patty, veggies and homemade chipotle sauce.
-          </TextContainer>
-        </Card.Section>
-      </Card>
+    <Stack vertical={true} spacing="extraLoose" alignment="center">
+        <Card
+          title={recipeName}
+          secondaryFooterActions={[
+            {content: 'Nay', url: `${base}/spinner`}
+          ]}
+          primaryFooterAction={
+            {content: 'Yay', url: `${base}/recipes/${recipeId}`}
+          }
+        >
+          <Card.Section>
+            <img id="bg" src={pic} alt="bg" />
+          </Card.Section>
+          <Card.Section>
+            <TextContainer>
+              Healthy veggie burgers, homemade bean patty, veggies and homemade chipotle sauce.
+            </TextContainer>
+          </Card.Section>
+        </Card>
+
+        <Button fullWidth={true} url={`${base}/recipes`}>See all recipes</Button>
+
+      </Stack>
       <Router>
         <Switch>  
-          <Route  path={`${match.url}/:recipeId`} component={Recipe}/>
+          <Route  path={`${base}/:recipeId`} component={Recipe}/>
         </Switch>
       </Router>
     </>

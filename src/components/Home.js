@@ -4,6 +4,8 @@ import pic from '../bg.png';
 import '../index.css';
 
 function Home() {
+  const base = 'http://localhost:3000';
+  
   return (
     <Card>
       <Card.Section>
@@ -12,12 +14,12 @@ function Home() {
       <Card.Section>
       <Card.Subsection>
         <Stack distribution="center" spacing="loose" alignment="center">
-        <Button>What's for dinner</Button>
+        <Button url={`${base}/spinner`}>What's for dinner</Button>
         </Stack>
       </Card.Subsection>
       <Card.Subsection>
         <Stack distribution="center" spacing="loose" alignment="center">
-          <Button>See all recipes</Button>
+          <Button url={`${base}/recipes`}>See all recipes</Button>
         </Stack>
       </Card.Subsection>
       </Card.Section>
