@@ -3,7 +3,7 @@ import {BrowserRouter as Router,
   Route,
   Switch} from 'react-router-dom';
 import {Card, TextContainer, Button, Stack} from '@shopify/polaris';
-import pic from '../bg.png';
+
 import '../index.css';
 import Recipe from './Recipe';
 import { recipeData } from "./data";
@@ -33,7 +33,16 @@ function Spinner() {
           }
         >
           <Card.Section>
-            <img id="bg" src={pic} alt="bg" />
+            <img
+              width="100%"
+              height="100%"
+              style={{
+                objectFit: 'cover',
+                objectPosition: 'center',
+              }}
+              alt={recipe[0].name}
+              src={recipe[0].imagePath}
+            />
           </Card.Section>
           <Card.Section>
             <TextContainer>

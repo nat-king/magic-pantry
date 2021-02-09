@@ -1,6 +1,5 @@
 import React from 'react';
 import {Button, Card, Stack} from '@shopify/polaris';
-import pic from '../bg.png';
 import '../index.css';
 
 function Home() {
@@ -9,7 +8,7 @@ function Home() {
   return (
     <Card>
       <Card.Section>
-      <img id="bg" src={pic} alt="bg" />
+      <img id="bg" src='https://media.giphy.com/media/l4FGBE6xf8x9Xn8ME/giphy.gif' alt="bg" />
       </Card.Section>
       <Card.Section>
       <Card.Subsection>

@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 import {BrowserRouter as Router,
     Route,
     Switch} from 'react-router-dom';
-import {Button, Modal, TextContainer, Stack, Heading} from '@shopify/polaris'
+import {Button, Modal, TextContainer, Link, Stack, Heading} from '@shopify/polaris'
 import './index.css';
 import Home from './components/Home';
 import Spinner from './components/Spinner';
 import Recipes from './components/Recipes';
-import logo from './logo.png';
+import logo from './images/logo.png';
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
                 ))}
             </Modal>
             <Heading element="h1">Magic Pantry</Heading>
-            <img id="logo" src={logo} alt="Logo" />;
+            <Link url='http://localhost:3000'><img id="logo" src={logo} alt="Logo" /></Link>
         </Stack> 
         <Router>
             <Switch>
