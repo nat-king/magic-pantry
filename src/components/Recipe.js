@@ -9,12 +9,17 @@ import Ingredients from './Ingredients';
 import Instructions from './Instructions';
 import pic from '../bg.png';
 import '../index.css';
+import { recipeData } from "./data";
 
 function Recipes() {
   let match = useRouteMatch();
   const base = 'http://localhost:3000';
   const { recipeId } = useParams();
-  const recipeName = 'Veggie burger'
+  const recipe = recipeData.filter((data) => {
+    return data.recipeId === recipeId;
+  });
+  
+  const recipeName = recipe[0].name
   const markUp = (
 
     <Stack vertical={true} spacing="extraLoose" alignment="center">

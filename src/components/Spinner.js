@@ -6,13 +6,20 @@ import {Card, TextContainer, Button, Stack} from '@shopify/polaris';
 import pic from '../bg.png';
 import '../index.css';
 import Recipe from './Recipe';
-
-
+import { recipeData } from "./data";
 
 function Spinner() {
   const base = 'http://localhost:3000';
-  const recipeName = 'Veggie burger'
-  const recipeId = '1'
+  const recipeId = '1' //random
+  const res = Math.floor(Math.random() * 10) + 1;
+  console.log(res)
+  const recipe = recipeData.filter((data) => {
+    return data.recipeId === recipeId;
+  });
+
+  const recipeName = recipe[0].name;
+  const recipeBlurb = recipe[0].blurb;
+  
   return (
     <>
     <Stack vertical={true} spacing="extraLoose" alignment="center">
@@ -30,7 +37,7 @@ function Spinner() {
           </Card.Section>
           <Card.Section>
             <TextContainer>
-              Healthy veggie burgers, homemade bean patty, veggies and homemade chipotle sauce.
+            {recipeBlurb}
             </TextContainer>
           </Card.Section>
         </Card>

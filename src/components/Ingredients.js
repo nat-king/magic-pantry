@@ -1,19 +1,21 @@
 import React, {useState} from 'react';
 import {Card, Layout, Stack, Button, ButtonGroup, OptionList} from '@shopify/polaris';
 import {useRouteMatch} from 'react-router-dom';
+import { recipeData } from "./data";
+
 
 function Ingredients() {
   let match = useRouteMatch();
   const [selected, setSelected] = useState([]);
-  const ingredientsList = [
-    {value: 'online_store', label: 'Online Store'},
-    {value: 'messenger', label: 'Messenger'},
-    {value: 'facebook', label: 'Facebook'},
-    {value: 'wholesale', label: 'Wholesale'},
-    {value: 'buzzfeed', label: 'BuzzFeed'},
-  ]
+  const recipeId =  match.url.slice(9,-12);
+  const recipe = recipeData.filter((data) => {
+    return data.recipeId === recipeId;
+  });
+
+  const ingredientsList = recipe[0].ingredients;
+  
   const recipeUrl = `http://localhost:3000${match.url.slice(0,-12)}`;
-  console.log(recipeUrl)
+  
   return (
     <Layout>
       <Layout.Section>
