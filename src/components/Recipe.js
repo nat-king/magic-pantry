@@ -7,7 +7,6 @@ import {BrowserRouter as Router,
 import {Card, Stack, Button, ButtonGroup} from '@shopify/polaris';
 import Ingredients from './Ingredients';
 import Instructions from './Instructions';
-import pic from '../images/bg.png';
 import '../index.css';
 import { recipeData } from "./data";
 
@@ -16,7 +15,7 @@ function Recipes() {
   const base = 'http://localhost:3000';
   const { recipeId } = useParams();
   const recipe = recipeData.filter((data) => {
-    return data.recipeId === recipeId;
+    return data.recipeId == recipeId;
   });
   
   const recipeName = recipe[0].name

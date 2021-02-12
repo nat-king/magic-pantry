@@ -9,7 +9,7 @@ function Ingredients() {
   const [selected, setSelected] = useState([]);
   const recipeId =  match.url.slice(9,-12);
   const recipe = recipeData.filter((data) => {
-    return data.recipeId === recipeId;
+    return data.recipeId == recipeId;
   });
 
   const ingredientsList = recipe[0].ingredients;

@@ -7,7 +7,7 @@ function Instructions() {
   let match = useRouteMatch();
   const recipeId =  match.url.slice(9,-13);
   const recipe = recipeData.filter((data) => {
-    return data.recipeId === recipeId;
+    return data.recipeId == recipeId;
   });
 
   const inst = recipe[0].steps;

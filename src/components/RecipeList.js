@@ -1,22 +1,19 @@
 import React from 'react';
 import {Card, Link, Layout, Stack, Button, ButtonGroup, } from '@shopify/polaris';
+import { recipeData } from "./data";
 
 function RecipeList() {
   const base = 'http://localhost:3000';
-  let recipes = [{name:'step number 1', id: '1'}, 
-              {name: 'Step numero doux', id: '2'},
-              {name:'Step numero tres', id:'3'}
-            ];
-
+            
   return (
     <Layout>
       <Layout.Section>
         <Card sectioned={true}
         title='Instructions'
         >
-          {recipes.map((recipe) => 
+          {recipeData.map((recipe) => 
           (<Card.Section>
-            <Link url={`${base}/recipes/${recipe.id}`}>{recipe.name}</Link>
+            <Link url={`${base}/recipes/${recipe.recipeId}`}>{recipe.name}</Link>
           </Card.Section>))}
         </Card>
       </Layout.Section>

@@ -10,13 +10,13 @@ import { recipeData } from "./data";
 
 function Spinner() {
   const base = 'http://localhost:3000';
-  const recipeId = '1' //random
-  const res = Math.floor(Math.random() * 10) + 1;
-  console.log(res)
+  const recipeId = Math.floor(Math.random() * 10) + 1; //random
+ 
   const recipe = recipeData.filter((data) => {
-    return data.recipeId === recipeId;
+    console.log('data: ', data.recipeId, 'var: ', recipeId )
+    return data.recipeId == recipeId;
   });
-
+  
   const recipeName = recipe[0].name;
   const recipeBlurb = recipe[0].blurb;
   

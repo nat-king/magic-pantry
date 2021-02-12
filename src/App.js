@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {BrowserRouter as Router,
     Route,
     Switch} from 'react-router-dom';
-import {Button, Modal, TextContainer, Link, Stack, Heading} from '@shopify/polaris'
+import {Button, Modal, Link, Stack, Heading} from '@shopify/polaris'
 import './index.css';
 import Home from './components/Home';
 import Spinner from './components/Spinner';
@@ -22,13 +22,12 @@ function App() {
                 title="Scrollable content"
                 onClose={handleChange}
             >
-                {Array.from({length: 5}, (_, index) => (
-                <Modal.Section key={index}>
-                    <TextContainer>
-                    <p>Item #{index}</p>
-                    </TextContainer>
+                <Modal.Section>
+                    <Link url='http://localhost:3000/spinner'>Dinner roulette</Link>
                 </Modal.Section>
-                ))}
+                <Modal.Section>
+                    <Link url='http://localhost:3000/recipes'>All recipes</Link>
+                </Modal.Section>
             </Modal>
             <Heading element="h1">Magic Pantry</Heading>
             <Link url='http://localhost:3000'><img id="logo" src={logo} alt="Logo" /></Link>
