@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router,
+import {HashRouter,
   Route,
   Switch, 
   useRouteMatch,
@@ -51,13 +51,13 @@ function Recipes() {
     </Stack>
   );
   return (
-      <Router>
+      <HashRouter basename="/">
           <Switch>  
           <Route path={`${match.url}/ingredients`} component={Ingredients}/>
           <Route path={`${match.url}/instructions`} component={Instructions}/>
           <Route path={`${match.url}`}>{markUp}</Route>
           </Switch>
-      </Router>
+      </HashRouter>
     
   );
 }

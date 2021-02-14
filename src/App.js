@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {BrowserRouter as Router,
+import {HashRouter,
     Route,
     Switch} from 'react-router-dom';
 import {Button, Modal, Link, Stack, Heading} from '@shopify/polaris'
@@ -32,13 +32,13 @@ function App() {
             <Heading element="h1">Magic Pantry</Heading>
             <Link url='https://nat-king.github.io/magic-pantry'><img id="logo" src={logo} alt="Logo" /></Link>
         </Stack> 
-        <Router>
+        <HashRouter basename="/">
             <Switch>
                 <Route exact path='/' component={Home}/>
                 <Route  path='/spinner' component={Spinner}/>
                 <Route path='/recipes' component={Recipes}/>
             </Switch>
-        </Router>
+        </HashRouter>
     </>
   );
 

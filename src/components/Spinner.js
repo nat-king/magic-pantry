@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router,
+import {HashRouter,
   Route,
   Switch} from 'react-router-dom';
 import {Card, TextContainer, Button, Stack} from '@shopify/polaris';
@@ -54,11 +54,11 @@ function Spinner() {
         <Button fullWidth={true} url={`${base}/recipes`}>See all recipes</Button>
 
       </Stack>
-      <Router>
+      <HashRouter basename="/">
         <Switch>  
           <Route  path={`${base}/:recipeId`} component={Recipe}/>
         </Switch>
-      </Router>
+      </HashRouter>
     </>
   );
 }
