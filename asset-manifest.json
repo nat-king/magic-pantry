@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/magic-pantry/static/css/main.a4d97893.chunk.css",
+    "main.js": "/magic-pantry/static/js/main.cee5b4f5.chunk.js",
+    "main.js.map": "/magic-pantry/static/js/main.cee5b4f5.chunk.js.map",
+    "runtime-main.js": "/magic-pantry/static/js/runtime-main.789fc73e.js",
+    "runtime-main.js.map": "/magic-pantry/static/js/runtime-main.789fc73e.js.map",
+    "static/css/2.534deec4.chunk.css": "/magic-pantry/static/css/2.534deec4.chunk.css",
+    "static/js/2.a413c83d.chunk.js": "/magic-pantry/static/js/2.a413c83d.chunk.js",
+    "static/js/2.a413c83d.chunk.js.map": "/magic-pantry/static/js/2.a413c83d.chunk.js.map",
+    "index.html": "/magic-pantry/index.html",
+    "static/css/2.534deec4.chunk.css.map": "/magic-pantry/static/css/2.534deec4.chunk.css.map",
+    "static/css/main.a4d97893.chunk.css.map": "/magic-pantry/static/css/main.a4d97893.chunk.css.map",
+    "static/js/2.a413c83d.chunk.js.LICENSE.txt": "/magic-pantry/static/js/2.a413c83d.chunk.js.LICENSE.txt",
+    "static/media/logo.fa72b9b1.png": "/magic-pantry/static/media/logo.fa72b9b1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.789fc73e.js",
+    "static/css/2.534deec4.chunk.css",
+    "static/js/2.a413c83d.chunk.js",
+    "static/css/main.a4d97893.chunk.css",
+    "static/js/main.cee5b4f5.chunk.js"
+  ]
+}
