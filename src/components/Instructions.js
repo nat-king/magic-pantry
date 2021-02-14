@@ -12,7 +12,7 @@ function Instructions() {
 
   const inst = recipe[0].steps;
 
-  const recipeUrl = `http://localhost:3000${match.url.slice(0,-13)}`;
+  const recipeUrl = `https://nat-king.github.io/magic-pantry${match.url.slice(0,-13)}`;
   console.log(recipeUrl)
   // let inst = ['step number 1', 'Step numero doux', 'Step numero tres'];
 

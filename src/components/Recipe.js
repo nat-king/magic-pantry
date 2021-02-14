@@ -12,7 +12,7 @@ import { recipeData } from "./data";
 
 function Recipes() {
   let match = useRouteMatch();
-  const base = 'http://localhost:3000';
+  const base = 'https://nat-king.github.io/magic-pantry';
   const { recipeId } = useParams();
   const recipe = recipeData.filter((data) => {
     return data.recipeId == recipeId;

@@ -23,14 +23,14 @@ function App() {
                 onClose={handleChange}
             >
                 <Modal.Section>
-                    <Link url='http://localhost:3000/spinner'>Dinner roulette</Link>
+                    <Link url='https://nat-king.github.io/magic-pantry/spinner'>Dinner roulette</Link>
                 </Modal.Section>
                 <Modal.Section>
-                    <Link url='http://localhost:3000/recipes'>All recipes</Link>
+                    <Link url='https://nat-king.github.io/magic-pantry/recipes'>All recipes</Link>
                 </Modal.Section>
             </Modal>
             <Heading element="h1">Magic Pantry</Heading>
-            <Link url='http://localhost:3000'><img id="logo" src={logo} alt="Logo" /></Link>
+            <Link url='https://nat-king.github.io/magic-pantry'><img id="logo" src={logo} alt="Logo" /></Link>
         </Stack> 
         <Router>
             <Switch>

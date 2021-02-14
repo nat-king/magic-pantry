@@ -14,7 +14,7 @@ function Ingredients() {
 
   const ingredientsList = recipe[0].ingredients;
   
-  const recipeUrl = `http://localhost:3000${match.url.slice(0,-12)}`;
+  const recipeUrl = `https://nat-king.github.io/magic-pantry${match.url.slice(0,-12)}`;
   
   return (
     <Layout>
