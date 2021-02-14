@@ -12,7 +12,7 @@ import { recipeData } from "./data";
 
 function Recipes() {
   let match = useRouteMatch();
-  const base = 'https://nat-king.github.io/magic-pantry';
+  const base = 'https://nat-king.github.io/magic-pantry/#';
   const { recipeId } = useParams();
   const recipe = recipeData.filter((data) => {
     return data.recipeId == recipeId;
@@ -39,7 +39,8 @@ function Recipes() {
         </Card.Section>
         <Card.Section>
         <ButtonGroup fullWidth={true}>
-          <Button url={`${match.url}/ingredients`}>Ingredients</Button>
+          {/* <Button url={`${match.url}/ingredients`}>Ingredients</Button> */}
+          <Button url={`${base}/recipes/${recipeId}/ingredients`}>Ingredients</Button>
           <Button url={`${match.url}/instructions`}>Instructions</Button>
         </ButtonGroup>
         </Card.Section>

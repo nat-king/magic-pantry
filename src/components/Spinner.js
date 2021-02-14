@@ -9,7 +9,7 @@ import Recipe from './Recipe';
 import { recipeData } from "./data";
 
 function Spinner() {
-  const base = 'https://nat-king.github.io/magic-pantry';
+  const base = 'https://nat-king.github.io/magic-pantry/#';
   const recipeId = Math.floor(Math.random() * 10) + 1; //random
  
   const recipe = recipeData.filter((data) => {
