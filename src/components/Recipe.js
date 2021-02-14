@@ -41,7 +41,7 @@ function Recipes() {
         <ButtonGroup fullWidth={true}>
           {/* <Button url={`${match.url}/ingredients`}>Ingredients</Button> */}
           <Button url={`${base}/recipes/${recipeId}/ingredients`}>Ingredients</Button>
-          <Button url={`${match.url}/instructions`}>Instructions</Button>
+          <Button url={`${base}/recipes/${recipeId}/instructions`}>Instructions</Button>
         </ButtonGroup>
         </Card.Section>
       </Card>

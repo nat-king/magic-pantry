@@ -3,7 +3,7 @@ import {Button, Card, Stack} from '@shopify/polaris';
 import '../index.css';
 
 function Home() {
-  const base = 'https://nat-king.github.io/magic-pantry';
+  const base = 'https://nat-king.github.io/magic-pantry/#';
   
   return (
     <Card>

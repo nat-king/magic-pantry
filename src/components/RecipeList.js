@@ -3,7 +3,7 @@ import {Card, Link, Layout, Stack, Button, ButtonGroup, } from '@shopify/polaris
 import { recipeData } from "./data";
 
 function RecipeList() {
-  const base = 'https://nat-king.github.io/magic-pantry';
+  const base = 'https://nat-king.github.io/magic-pantry/#';
             
   return (
     <Layout>
