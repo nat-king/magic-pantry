@@ -15,6 +15,14 @@ code {
 #logo {
   width: 50px;
 }
-#bg{
-  width: 100%;
+img {
+  padding: 2em;
+}
+.blurb {
+  display: grid;
+  grid-template-columns: 1fr  2fr;
+}
+
+.title {
+  padding: 2em;
 }

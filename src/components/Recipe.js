@@ -15,7 +15,7 @@ function Recipes() {
   const base = 'https://nat-king.github.io/magic-pantry/#';
   const { recipeId } = useParams();
   const recipe = recipeData.filter((data) => {
-    return data.recipeId == recipeId;
+    return data.recipeId === recipeId;
   });
   
   const recipeName = recipe[0].name
